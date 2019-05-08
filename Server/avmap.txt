@@ -1,6 +1,0 @@
--song streaming 10da / day
--singers featured songs
--avm playlist of choice
--radios live
--favorite songs/playlist
--latest songs

@@ -1,4 +1,4 @@
-package devwassimbr.avmap;
+﻿package devwassimbr.avmap;
 
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
@@ -208,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
             builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
 
             builder.setTitle("Thank you ^^ !")
-                    .setMessage("Alors bien venu chez ici ,ce qui reste men l'app ces deux faille et une synchonisation m3a serveur (c pk tu a restart) swalah ki seront fait definitivemnt memba3d , enjoy surfing et her's a tip scroll up the green plyer :3")
+                    .setMessage("")
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
 
@@ -216,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
                     })
                     .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(getApplicationContext(),"fuck you then u_u ",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"u_u",Toast.LENGTH_LONG).show();
 
                         }
                     })
@@ -237,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
                     })
                     .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(getApplicationContext(),"fuck you then u_u ",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"u_u ",Toast.LENGTH_LONG).show();
                             finish();
                         }
                     })
