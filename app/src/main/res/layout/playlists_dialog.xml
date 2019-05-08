@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <TextView
+            android:id="@+id/addtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add to Playlist"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+
+
+        </ListView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/close"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fg_selected"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:onClick="onCancel"
+                android:text="@android:string/cancel" />
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

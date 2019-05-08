@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NowPlayingActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="@color/colorGray"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="7dp"
+        app:contentPadding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:onClick="backActivity"
+                android:scaleType="fitCenter"
+                android:tint="@color/colorAccent"
+                app:srcCompat="@drawable/back" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Now Playing"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:tint="@color/colorAccent"
+                app:srcCompat="@drawable/save" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/gradient_background">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:transitionName="mediaplayer">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:progressDrawable="@drawable/buffer_bar"
+            android:transitionName="progressbar" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.9"
+            android:background="@color/colorGray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="-20dp"
+                android:elevation="3dp"
+                android:minWidth="200dp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Becky G - happy"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:transitionName="title" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="-10dp"
+                android:background="@drawable/round_shaped_text"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Becky G"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:transitionName="artist" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:progressDrawable="@drawable/seek_bar2"
+                    android:thumb="@drawable/progress_thum2"
+                    android:transitionName="seekbar" />
+
+                <TextView
+                    android:id="@+id/currentTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:text="01:25  -  3:19"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:transitionName="currenttime" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnsRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/repeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent"
+                    android:onClick="toggleLoop"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/repeat"
+                    android:tint="@color/colorAccent"
+                    android:transitionName="previous" />
+
+                <ImageButton
+                    android:id="@+id/previous"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent"
+                    android:onClick="playPrevious"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/previous"
+                    android:tint="@color/colorAccent"
+                    android:transitionName="previous" />
+
+                <LinearLayout
+                    android:id="@+id/plapause"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:transitionName="plapause">
+
+                    <ImageButton
+                        android:id="@+id/play"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@android:color/transparent"
+                        android:onClick="resumeAudio"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/colorAccent"
+                        android:transitionName="play"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/play" />
+
+                    <ImageButton
+                        android:id="@+id/pause"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@android:color/transparent"
+                        android:onClick="pauseAudio"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/colorAccent"
+                        android:transitionName="pause"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/pause" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/next"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent"
+                    android:onClick="playNext"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/colorAccent"
+                    android:transitionName="next"
+                    app:srcCompat="@drawable/next" />
+
+                <ImageButton
+                    android:id="@+id/shuffle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent"
+                    android:onClick="toggleShuffle"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/colorAccent"
+                    android:transitionName="next"
+                    app:srcCompat="@drawable/shuffle" />
+            </LinearLayout>
+
+            <me.itangqi.waveloadingview.WaveLoadingView
+                android:id="@+id/waveLoadingView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                app:wlv_borderWidth="3dp"
+                app:wlv_progressValue="40"
+                app:wlv_round_rectangle="false"
+                app:wlv_shapeType="rectangle"
+                app:wlv_titleCenterStrokeWidth="3dp"
+                app:wlv_triangle_direction="north"
+                app:wlv_waveAmplitude="100"
+                app:wlv_waveColor="@color/colorAccent" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

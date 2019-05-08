@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/touchme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#cc000000"
+            android:fitsSystemWindows="true"
+            app:elevation="0dp"
+            app:layout_behavior="devwassimbr.avmap.DisableViewPagerTouchOnScrollBehaviour">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:elevation="0dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+                <!--dummy view-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:fitsSystemWindows="true">
+
+                </View>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:color/transparent"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:elevation="0dp"
+                    app:layout_collapseMode="pin" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </android.support.v4.view.ViewPager>
+
+        <devwassimbr.avmap.IconPageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:fitsSystemWindows="true"
+            app:layout_behavior="devwassimbr.avmap.CollapsingIndicatorBehaviour">
+
+
+        </devwassimbr.avmap.IconPageIndicator>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
+
+

@@ -1,0 +1,206 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:isScrollContainer="false"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="100dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/round_shaped_panel"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="New Releases"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/newbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/fg_selected"
+                    android:text="Play All"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view6"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorPrimaryDark" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/newReleasesView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:id="@+id/view"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/round_shaped_panel"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:id="@+id/txt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Artists"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/artistsbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/fg_selected"
+                    android:text="Show All"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view4"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorPrimaryDark" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/artistsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0" />
+
+            <View
+                android:id="@+id/view2"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/round_shaped_panel"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:id="@+id/year"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Years"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/yearbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/fg_selected"
+                    android:text="Show All"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view5"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorPrimaryDark" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/yearsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0" />
+
+            <View
+                android:id="@+id/view3"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
