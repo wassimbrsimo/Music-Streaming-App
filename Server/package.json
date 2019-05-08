@@ -1,0 +1,17 @@
+{
+  "name": "avmserver",
+  "version": "1.0.0",
+  "description": "Audio streaming erver",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mediaserver": "^0.1.1",
+    "socket.io": "^2.1.1"
+  }
+}

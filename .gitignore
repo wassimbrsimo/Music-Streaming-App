@@ -1,10 +1,38 @@
+# Built application files
+*.apk
+*.ap_
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+
+
+# Gradle files
+App/.gradle/
+app/build/
+.externalNativeBuild/
+
+
+# Local configuration file (sdk path, etc)
+App/local.properties
+
+
+
+# Log Files
+*.log
+
+
+
+
+# Intellij
 *.iml
-.gradle
-/local.properties
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
+App/.idea/
+App/.idea/workspace.xml
+
+# Keystore files
+*.jks
+
+
